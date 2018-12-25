@@ -37,7 +37,7 @@ def post_upload_graph(graph):
 
 def get_degrees_of_separation(start,end,graph):
     data = graph
-    request = requests.post(localhost+"/degrees_of_seperation/<start>/<end>", json=data)
+    request = requests.post(localhost+"/degrees_of_seperation/"+start+"/"+end, json=data)
     if request.status_code == 200:
         return request.json()
     else:
